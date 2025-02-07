@@ -5,5 +5,5 @@
 
 (
 cd github.com/HPCI-Lab/TC-GNN &&
-    git rev-parse --is-inside-work-tree
+    mdl --json  .
 )

@@ -5,5 +5,5 @@
 
 (
 cd github.com/HPCI-Lab/TC-GNN &&
-    licensee detect . --confidence 60 --json
+    flake8 .
 )

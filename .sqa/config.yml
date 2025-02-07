@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/HPCI-Lab/TC-GNN:
       branch: main
@@ -15,28 +15,50 @@ sqa_criteria:
     repos:
       github.com/HPCI-Lab/TC-GNN git:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-pumpkin-wallaby.sh
-        container: qc.acc_chummy-tan-mist
+        - /usr/bin/env sh .sqa/script.nerdy-purple-malamute.sh
+        container: qc.acc_squeaky-copper-walrus
   QC.Doc:
     repos:
       github.com/HPCI-Lab/TC-GNN find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-charcoal-koala.sh
-        container: qc.doc_tacky-rust-spaniel
+        - /usr/bin/env sh .sqa/script.silly-lilac-wildebeest.sh
+        container: qc.doc_surly-maroon-dog
       github.com/HPCI-Lab/TC-GNN git:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-maroon-panda.sh
-        container: qc.doc_pretty-xanthic-barb
+        - /usr/bin/env sh .sqa/script.beady-rust-catfish.sh
+        container: qc.doc_sleepy-ruby-dragonfly
+      github.com/HPCI-Lab/TC-GNN markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-persimmon-blue.sh
+        container: qc.doc_sloppy-olive-frigatebird
   QC.Lic:
     repos:
       github.com/HPCI-Lab/TC-GNN licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-ruby-loon.sh
-        container: qc.lic_breezy-charcoal-dingo
+        - /usr/bin/env sh .sqa/script.thirsty-white-fly.sh
+        container: qc.lic_nippy-sapphire-abyssinian
+  QC.Sec:
+    repos:
+      github.com/HPCI-Lab/TC-GNN bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-blue-dragonfly.sh
+        container: qc.sec_scanty-chestnut-newt
+  QC.Sty:
+    repos:
+      github.com/HPCI-Lab/TC-GNN flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-beige-setter.sh
+        container: qc.sty_jumpy-green-owl
+  QC.Uni:
+    repos:
+      github.com/HPCI-Lab/TC-GNN pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-cerulean-dingo.sh
+        container: qc.uni_leaky-cobalt-mandrill
   QC.Ver:
     repos:
       github.com/HPCI-Lab/TC-GNN get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-chartreuse-cheetah.sh
-        container: qc.ver_bluesy-sepia-wombat
+        - /usr/bin/env sh .sqa/script.sleepy-puce-gibbon.sh
+        container: qc.ver_smelly-cerulean-chinook
 timeout: 5400
